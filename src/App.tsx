@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { PlayerPathway } from './components/PlayerPathway';
+import { MethodologySection } from './components/MethodologySection';
 import { AchievementSpotlight } from './components/AchievementSpotlight';
 import { About } from './components/About';
 import { CoachesSection } from './components/CoachesSection';
+import { SpecializedClinics } from './components/SpecializedClinics';
 import { Programs } from './components/Programs';
+import { ScheduleSection } from './components/ScheduleSection';
 import { Facilities } from './components/Facilities';
 import { Gallery } from './components/Gallery';
+import { TrialProtocolFAQ } from './components/TrialProtocolFAQ';
 import { Reviews } from './components/Reviews';
 import { LocationSection } from './components/LocationSection';
 import { ContactSection } from './components/ContactSection';
@@ -55,13 +60,18 @@ export const App: React.FC = () => {
       {/* Main Content */}
       <main className="flex-1">
         <Hero onOpenTrialModal={() => handleOpenTrialModal()} />
+        <PlayerPathway onOpenTrialModal={(prog) => handleOpenTrialModal(prog)} />
+        <MethodologySection onOpenTrialModal={() => handleOpenTrialModal()} />
         <AchievementSpotlight onOpenTrialModal={() => handleOpenTrialModal()} />
-        <About onOpenTrialModal={() => handleOpenTrialModal()} />
         <CoachesSection onOpenTrialModal={() => handleOpenTrialModal()} />
+        <SpecializedClinics onOpenTrialModal={(clinic) => handleOpenTrialModal(clinic)} />
         <Programs onOpenTrialModal={(prog) => handleOpenTrialModal(prog)} />
+        <ScheduleSection onOpenTrialModal={() => handleOpenTrialModal()} />
         <Facilities onOpenImageLightbox={handleOpenLightbox} />
         <Gallery onOpenImageLightbox={handleOpenLightbox} />
+        <TrialProtocolFAQ onOpenTrialModal={() => handleOpenTrialModal()} />
         <Reviews />
+        <About onOpenTrialModal={() => handleOpenTrialModal()} />
         <LocationSection />
         <ContactSection />
       </main>

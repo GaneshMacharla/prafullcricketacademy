@@ -19,13 +19,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
   }, []);
 
   const navLinks = [
-    { label: 'Achievements', href: '#achievements' },
-    { label: 'About', href: '#about' },
+    { label: 'Pathways', href: '#pathway' },
+    { label: 'Methodology', href: '#methodology' },
+    { label: 'Masterclasses', href: '#clinics' },
+    { label: 'Batches', href: '#schedule' },
     { label: 'Coaches', href: '#coaches' },
-    { label: 'Programs', href: '#programs' },
     { label: 'Facilities', href: '#facilities' },
-    { label: 'Gallery', href: '#gallery' },
-    { label: 'Location', href: '#location' },
+    { label: 'Trial Protocol', href: '#trial-protocol' },
     { label: 'Contact', href: '#contact' },
   ];
 

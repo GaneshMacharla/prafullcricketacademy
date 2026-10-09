@@ -81,6 +81,26 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrialModal }) => {
           </a>
         </div>
 
+        {/* Quick Benchmark Feature Highlights */}
+        <div className="mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-[11px] sm:text-xs">
+          <a href="#pathway" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
+            <span>4-Tier Player Pathway</span>
+          </a>
+          <a href="#methodology" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>4-Pillar High-Performance Pedagogy</span>
+          </a>
+          <a href="#clinics" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+            <span>Position Masterclasses</span>
+          </a>
+          <a href="#schedule" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-cricket-bright"></span>
+            <span>Batch Schedules</span>
+          </a>
+        </div>
+
         {/* Key Verified Badges Grid: 1 column on ultra-compact, 2 on xs & tablet, 4 on lg+ */}
         <div className="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 lg:gap-4 w-full max-w-5xl">
           <div className="glass-panel rounded-xl p-3 sm:p-4 flex items-center gap-2.5 sm:gap-3 text-left">
