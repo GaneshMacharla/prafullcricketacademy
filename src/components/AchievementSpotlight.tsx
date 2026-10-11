@@ -21,21 +21,21 @@ export const AchievementSpotlight: React.FC<AchievementSpotlightProps> = ({ onOp
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 to-red-500/20 border border-amber-500/30 text-amber-400 text-xs font-bold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-amber-500/20 to-red-500/20 border border-amber-500/30 text-amber-300 font-athletic text-xs font-bold uppercase tracking-wider mb-3">
             <Flame className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
-            <span>HCA League Match Spotlight • Big Stage Performance</span>
+            <span>HCA League Match Center • Big Stage Heroics</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Warrior Spirit on the 22 Yards
+          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            WARRIOR SPIRIT ON THE 22 YARDS
           </h2>
-          <p className="mt-3 max-w-2xl text-slate-300 text-sm sm:text-base md:text-lg">
-            Sick with fever & nausea, unstoppable on the pitch: Cheera Aryan delivers a match-winning 4-wicket masterclass in the official Hyderabad Cricket Association League.
+          <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
+            Sick with fever & nausea, unstoppable on the pitch: Aryan Cheera delivers a match-winning 4-wicket masterclass in the official Hyderabad Cricket Association League.
           </p>
         </div>
 
-        {/* Feature Spotlight Card */}
-        <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-cricket-green/30 relative overflow-hidden bg-gradient-to-br from-[#0c1611] via-[#09110d] to-[#060a08] shadow-2xl">
+        {/* Feature Spotlight Card (Broadcast Match Center style) */}
+        <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-emerald-500/30 relative overflow-hidden bg-gradient-to-br from-[#0c1611] via-[#09110d] to-[#060a08] shadow-2xl">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
@@ -44,77 +44,77 @@ export const AchievementSpotlight: React.FC<AchievementSpotlightProps> = ({ onOp
               
               <div className="space-y-2">
                 <div className="flex flex-wrap items-center gap-2">
-                  <span className="px-2.5 py-1 rounded bg-cricket-green/20 text-cricket-bright text-xs font-bold uppercase tracking-wider">
+                  <span className="px-3 py-1 rounded-full bg-cricket-green/20 text-cricket-bright font-athletic text-xs font-bold uppercase tracking-wider border border-cricket-green/30">
                     {ach.tournament}
                   </span>
-                  <span className="px-2.5 py-1 rounded bg-white/5 text-slate-300 text-xs font-medium">
+                  <span className="px-3 py-1 rounded-full bg-white/10 text-slate-200 font-athletic text-xs font-bold uppercase tracking-wider">
                     vs {ach.opponent}
                   </span>
                 </div>
 
-                <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight pt-1">
+                <h3 className="athletic-title text-3xl sm:text-5xl font-black text-white tracking-tight pt-1">
                   {ach.player.name}
                 </h3>
-                <p className="text-xs sm:text-sm font-semibold text-emerald-400">
+                <p className="font-athletic text-sm sm:text-base font-bold uppercase tracking-wider text-emerald-400">
                   {ach.player.style} • PCA Academy Prodigy
                 </p>
               </div>
 
-              {/* Match Figures Grid */}
+              {/* Match Figures Grid (Sports Broadcast Card) */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
-                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-center">
-                  <div className="text-2xl sm:text-3xl font-black text-cricket-bright font-outfit">
+                <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 text-center">
+                  <div className="stat-number text-3xl sm:text-4xl text-cricket-bright">
                     9
                   </div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mt-0.5">
+                  <div className="text-[11px] font-athletic font-bold uppercase tracking-wider text-slate-400 mt-1">
                     Overs
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-center">
-                  <div className="text-2xl sm:text-3xl font-black text-white font-outfit">
+                <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 text-center">
+                  <div className="stat-number text-3xl sm:text-4xl text-white">
                     28
                   </div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mt-0.5">
+                  <div className="text-[11px] font-athletic font-bold uppercase tracking-wider text-slate-400 mt-1">
                     Runs
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-cricket-green/20 border border-cricket-green/40 text-center">
-                  <div className="text-2xl sm:text-3xl font-black text-cricket-bright font-outfit">
+                <div className="p-4 rounded-2xl bg-emerald-500/20 border border-emerald-400/40 text-center shadow-lg shadow-emerald-950/50">
+                  <div className="stat-number text-3xl sm:text-4xl text-cricket-bright">
                     4
                   </div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-cricket-bright mt-0.5">
+                  <div className="text-[11px] font-athletic font-bold uppercase tracking-wider text-cricket-bright mt-1">
                     Wickets
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 text-center">
-                  <div className="text-2xl sm:text-3xl font-black text-white font-outfit">
+                <div className="p-4 rounded-2xl bg-white/[0.04] border border-white/10 text-center">
+                  <div className="stat-number text-3xl sm:text-4xl text-amber-300">
                     3.11
                   </div>
-                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mt-0.5">
+                  <div className="text-[11px] font-athletic font-bold uppercase tracking-wider text-slate-400 mt-1">
                     Economy
                   </div>
                 </div>
               </div>
 
               {/* The "Mind Over Body" Resilience Story */}
-              <div className="p-4 rounded-xl bg-red-950/20 border border-red-500/20 space-y-2">
-                <div className="flex items-center gap-2 text-red-400 text-xs font-bold uppercase tracking-wider">
+              <div className="p-4 sm:p-5 rounded-2xl bg-red-950/30 border border-red-500/30 space-y-2">
+                <div className="flex items-center gap-2 text-red-400 font-athletic text-xs font-bold uppercase tracking-wider">
                   <ShieldAlert className="w-4 h-4 shrink-0" />
                   <span>The Anatomy of Pure Heart: Mind Over Body</span>
                 </div>
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
                   {ach.story}
                 </p>
               </div>
 
               {/* Philosophy Quote */}
-              <div className="relative pl-4 border-l-2 border-cricket-green italic text-xs sm:text-sm text-slate-300 space-y-1">
-                <Quote className="w-4 h-4 text-cricket-green mb-1" />
+              <div className="relative pl-4 border-l-2 border-cricket-bright italic text-xs sm:text-sm text-slate-300 space-y-1 font-sans">
+                <Quote className="w-4 h-4 text-cricket-bright mb-1" />
                 <p>"{ach.quote}"</p>
-                <div className="text-[11px] font-bold text-cricket-bright not-italic pt-1">
+                <div className="text-[11px] font-athletic font-bold uppercase tracking-wider text-cricket-bright not-italic pt-1">
                   — Prafull Cricket Academy Coaching Philosophy
                 </div>
               </div>

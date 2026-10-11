@@ -41,31 +41,33 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
 
           {/* Col 3: Navigation */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+            <h4 className="font-athletic text-xs font-bold uppercase tracking-wider text-white mb-4">
               Explore Academy
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
-              <li><a href="#about" className="hover:text-cricket-bright transition-colors">About PCA</a></li>
-              <li><a href="#programs" className="hover:text-cricket-bright transition-colors">Coaching Programs</a></li>
+            <ul className="space-y-2 text-xs sm:text-sm font-sans">
+              <li><a href="#pathway" className="hover:text-cricket-bright transition-colors">Player Pathways</a></li>
+              <li><a href="#methodology" className="hover:text-cricket-bright transition-colors">4-Pillar Pedagogy</a></li>
+              <li><a href="#achievements" className="hover:text-cricket-bright transition-colors">HCA Match Center</a></li>
+              <li><a href="#coaches" className="hover:text-cricket-bright transition-colors">Coaching Panel</a></li>
+              <li><a href="#clinics" className="hover:text-cricket-bright transition-colors">Specialized Clinics</a></li>
+              <li><a href="#schedule" className="hover:text-cricket-bright transition-colors">Batch Schedules</a></li>
               <li><a href="#facilities" className="hover:text-cricket-bright transition-colors">Ground & Nets</a></li>
-              <li><a href="#gallery" className="hover:text-cricket-bright transition-colors">Photo Gallery</a></li>
-              <li><a href="#location" className="hover:text-cricket-bright transition-colors">Maps & Directions</a></li>
-              <li><button onClick={onOpenTrialModal} className="text-cricket-bright hover:underline font-semibold">Book Trial Session</button></li>
+              <li><button onClick={onOpenTrialModal} className="text-cricket-bright hover:underline font-semibold text-left">Book Trial Session</button></li>
             </ul>
           </div>
 
           {/* Col 4: Training Disciplines */}
           <div>
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white mb-4">
+            <h4 className="font-athletic text-xs font-bold uppercase tracking-wider text-white mb-4">
               Curriculum Focus
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm">
-              <li>Batting Technique Drills</li>
-              <li>Bowling Biomechanics & Seam</li>
-              <li>Fielding, Catching & Agility</li>
-              <li>Cricket Physical Conditioning</li>
-              <li>Net Match Simulations</li>
-              <li>Junior Development Batches</li>
+            <ul className="space-y-2 text-xs sm:text-sm font-sans">
+              <li>Batting Biomechanics Drills</li>
+              <li>Fast Bowling Speed & Seam Lab</li>
+              <li>Spin Bowling Revs & Deception</li>
+              <li>Fielding, Reflexes & Agility</li>
+              <li>140+ km/h Bowling Machine Reps</li>
+              <li>HCA Division Match Play</li>
             </ul>
           </div>
 

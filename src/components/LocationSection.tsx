@@ -9,13 +9,13 @@ export const LocationSection: React.FC = () => {
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-cricket-bright bg-cricket-green/10 border border-cricket-green/20 px-3 py-1 rounded-md mb-3">
-            Location & Access
+          <span className="athletic-badge text-xs sm:text-sm tracking-wider text-cricket-bright bg-cricket-green/10 border border-cricket-green/30 px-4 py-1.5 rounded-full mb-3">
+            Location & Ground Access • Secunderabad
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Find PCA – Prafull Cricket Academy
+          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            FIND PRAFULL CRICKET ACADEMY
           </h2>
-          <p className="mt-4 max-w-2xl text-slate-300 text-base sm:text-lg">
+          <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
             Conveniently situated at Plassy Lines, Bowenpally with easy access from Secunderabad, Cantonment, and Hyderabad.
           </p>
         </div>

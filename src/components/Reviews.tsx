@@ -34,27 +34,27 @@ export const Reviews: React.FC = () => {
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-cricket-bright bg-cricket-green/10 border border-cricket-green/20 px-3 py-1 rounded-md mb-3">
-            Parent & Player Feedback
+          <span className="athletic-badge text-xs sm:text-sm tracking-wider text-cricket-bright bg-cricket-green/10 border border-cricket-green/30 px-4 py-1.5 rounded-full mb-3">
+            Parent & Player Trust • 4.8★ Google Standing
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Verified Google Reviews
+          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            VERIFIED GOOGLE REVIEWS & PRAISE
           </h2>
-          <p className="mt-4 max-w-2xl text-slate-300 text-base sm:text-lg">
+          <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
             Genuine ratings and public feedback directly from our Google Maps listing in Bowenpally, Secunderabad.
           </p>
 
           {/* Rating Summary Scorecard */}
-          <div className="mt-8 inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-6 py-4 rounded-2xl glass-panel border border-cricket-green/30 shadow-glow">
+          <div className="mt-8 inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-8 px-8 py-5 rounded-3xl glass-panel border border-amber-400/30 shadow-glow">
             <div className="flex items-center gap-3">
-              <span className="text-4xl sm:text-5xl font-extrabold text-white">4.8</span>
+              <span className="stat-number text-4xl sm:text-6xl text-amber-400">4.8</span>
               <div className="text-left">
-                <div className="flex items-center gap-1 text-cricket-bright">
+                <div className="flex items-center gap-1 text-amber-400">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-cricket-bright text-cricket-bright" />
+                    <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
                   ))}
                 </div>
-                <div className="text-xs text-slate-300 font-semibold mt-0.5">
+                <div className="text-xs text-slate-300 font-sans font-semibold mt-1">
                   Based on 83 Google Reviews
                 </div>
               </div>

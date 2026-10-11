@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Phone, Star, MapPin, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Calendar, Phone, Star, ArrowRight, ShieldCheck, Zap, Trophy, Flame } from 'lucide-react';
 import { academy } from '../data/academy';
 
 interface HeroProps {
@@ -8,142 +8,207 @@ interface HeroProps {
 
 export const Hero: React.FC<HeroProps> = ({ onOpenTrialModal }) => {
   return (
-    <section className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center pt-24 sm:pt-32 pb-14 sm:pb-20 overflow-hidden">
-      {/* Background Image with Cinematic Dark Athletic Overlay */}
+    <section className="relative min-h-[90vh] flex flex-col justify-between pt-28 sm:pt-36 pb-12 sm:pb-16 overflow-hidden">
+      {/* Background Image with High-Contrast Sports Stadium Treatment */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src="/images/academy/pca-gmaps-02.jpg"
           alt="Prafull Cricket Academy students training on ground in Bowenpally"
-          className="w-full h-full object-cover object-center filter brightness-[0.32] contrast-[1.1]"
+          className="w-full h-full object-cover object-center filter brightness-[0.28] contrast-[1.15]"
         />
-        {/* Layered gradients for text contrast and athletic atmosphere */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#080d0a] via-[#080d0a]/75 to-[#080d0a]/40"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-[#080d0a] via-[#080d0a]/70 to-[#080d0a]/50"></div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90vw] max-w-2xl h-64 sm:h-96 bg-cricket-green/10 blur-[80px] sm:blur-[120px] pointer-events-none rounded-full"></div>
+        {/* Layered athletic gradients */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#060b08]/90 via-[#060b08]/75 to-[#060b08]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#060b08]/95 via-[#060b08]/60 to-[#060b08]/90"></div>
+        {/* Floodlight beams */}
+        <div className="absolute top-0 left-1/4 w-[60vw] max-w-xl h-96 bg-emerald-500/15 blur-[120px] pointer-events-none rounded-full"></div>
+        <div className="absolute top-10 right-1/4 w-[50vw] max-w-lg h-96 bg-amber-500/10 blur-[120px] pointer-events-none rounded-full"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-6 sm:py-10 flex flex-col items-center text-center w-full">
+      {/* Main Hero Body */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center w-full my-auto">
         
-        {/* Verified Google Maps Trust Badge */}
-        <a
-          href={academy.mapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-1.5 sm:gap-2.5 px-3 sm:px-4 py-1.5 rounded-full bg-black/60 border border-cricket-green/40 backdrop-blur-md mb-5 sm:mb-8 hover:border-cricket-bright transition-all group max-w-full"
-        >
-          <div className="flex items-center gap-1 text-cricket-bright shrink-0">
-            <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 fill-cricket-bright text-cricket-bright" />
-            <span className="font-extrabold text-xs sm:text-sm text-white">4.8</span>
-          </div>
-          <span className="text-slate-400 text-xs">|</span>
-          <span className="text-[10px] sm:text-xs font-semibold text-slate-200 group-hover:text-cricket-bright transition-colors truncate">
-            Rated on Google ({academy.reviewCount} Reviews)
+        {/* League Prestige & Verified Rating Pill (Super Kings style) */}
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 font-athletic text-xs font-bold uppercase tracking-wider">
+            <Trophy className="w-3.5 h-3.5 text-amber-300" />
+            <span>HCA League Division Affiliated</span>
           </span>
-          <ArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-cricket-bright group-hover:translate-x-0.5 transition-transform shrink-0" />
-        </a>
 
-        {/* Main Brand Title & Headings */}
-        <div className="max-w-4xl mx-auto space-y-2.5 sm:space-y-4">
+          <a
+            href={academy.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/15 backdrop-blur-md hover:border-cricket-bright transition-all group"
+          >
+            <div className="flex items-center gap-1 text-cricket-bright">
+              <Star className="w-3.5 h-3.5 fill-cricket-bright text-cricket-bright" />
+              <span className="font-athletic font-bold text-xs text-white">4.8 / 5.0</span>
+            </div>
+            <span className="text-slate-400 text-xs">|</span>
+            <span className="text-[11px] font-medium text-slate-300 group-hover:text-cricket-bright transition-colors font-sans">
+              Google Verified ({academy.reviewCount} Reviews)
+            </span>
+            <ArrowRight className="w-3 h-3 text-cricket-bright group-hover:translate-x-0.5 transition-transform" />
+          </a>
+        </div>
+
+        {/* Main Athletic Headline (Super Kings Academy + Coaching Beyond Impact) */}
+        <div className="max-w-5xl mx-auto space-y-3">
           <div className="inline-block">
-            <span className="text-[10px] sm:text-xs md:text-sm font-bold tracking-widest uppercase text-cricket-bright bg-cricket-green/10 border border-cricket-green/20 px-2.5 sm:px-3 py-1 rounded-md">
-              PCA • Prafull Cricket Academy
+            <span className="athletic-badge text-xs sm:text-sm tracking-widest text-cricket-bright bg-cricket-green/10 border border-cricket-green/25 px-3.5 py-1 rounded-full">
+              BOWENPALLY, SECUNDERABAD • HIGH-PERFORMANCE SANCTUARY
             </span>
           </div>
 
-          <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.15] sm:leading-[1.08] break-words">
-            Build Your Game. <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-300">
-              Build Your Future.
+          <h1 className="athletic-title text-4xl xs:text-5xl sm:text-7xl md:text-8xl font-black text-white leading-[0.95] tracking-tight">
+            BUILD YOUR GAME. <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cricket-bright via-emerald-300 to-amber-300">
+              DOMINATE THE 22 YARDS.
             </span>
           </h1>
 
-          <p className="max-w-2xl mx-auto text-xs sm:text-base md:text-xl text-slate-300 font-normal leading-relaxed pt-1 sm:pt-2 px-1 sm:px-0">
-            Professional cricket coaching for young players who want to learn, improve, and compete. Structured batting, bowling, fielding, and fitness drills at Bowenpally, Secunderabad.
+          <p className="max-w-2xl mx-auto text-sm sm:text-base md:text-lg text-slate-300 font-sans font-normal leading-relaxed pt-2 px-2">
+            The elite training destination for young cricketers aiming for league representation and state excellence. Biomechanical net drills, 140+ km/h bowling machines, and high-intensity match play under floodlights.
           </p>
         </div>
 
-        {/* CTA Buttons */}
-        <div className="mt-6 sm:mt-10 flex flex-col sm:flex-row items-center gap-2.5 sm:gap-4 w-full sm:w-auto">
+        {/* Action CTAs */}
+        <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
           <button
             onClick={onOpenTrialModal}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-8 py-3.5 sm:py-4 rounded-xl font-bold text-xs sm:text-base text-black bg-gradient-to-r from-cricket-bright to-emerald-500 hover:from-emerald-400 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cricket-bright"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-athletic font-black text-sm sm:text-base uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5 focus:outline-none"
           >
             <Calendar className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
-            <span>Book a Trial Session</span>
+            <span>Book Free Assessment Trial</span>
           </button>
 
           <a
             href={`tel:${academy.rawPhone}`}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 sm:gap-3 px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl font-semibold text-xs sm:text-base text-slate-100 bg-white/5 hover:bg-white/10 border border-white/15 backdrop-blur-md hover:border-cricket-green/50 transition-all focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-4 rounded-full font-athletic font-bold text-sm sm:text-base uppercase tracking-wider text-slate-100 bg-white/5 hover:bg-white/10 border border-white/20 backdrop-blur-md hover:border-cricket-bright transition-all"
           >
             <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-cricket-bright shrink-0" />
-            <span>Call the Academy</span>
+            <span>Call Coach Prafull: {academy.phone}</span>
           </a>
         </div>
 
-        {/* Quick Benchmark Feature Highlights */}
-        <div className="mt-5 flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-[11px] sm:text-xs">
-          <a href="#pathway" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+        {/* Quick Navigation Anchor Bar */}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-2 text-xs font-athletic font-bold uppercase tracking-wider">
+          <a href="#pathway" className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5 hover:text-amber-300">
             <span className="w-1.5 h-1.5 rounded-full bg-amber-400"></span>
-            <span>4-Tier Player Pathway</span>
+            <span>01 Player Pathway</span>
           </a>
-          <a href="#methodology" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+          <a href="#methodology" className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5 hover:text-emerald-300">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            <span>4-Pillar High-Performance Pedagogy</span>
+            <span>02 4-Pillar System</span>
           </a>
-          <a href="#clinics" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
-            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
-            <span>Position Masterclasses</span>
+          <a href="#achievements" className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5 hover:text-red-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+            <span>03 HCA Match Center</span>
           </a>
-          <a href="#schedule" className="px-3 py-1 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5">
+          <a href="#coaches" className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5 hover:text-cricket-bright">
             <span className="w-1.5 h-1.5 rounded-full bg-cricket-bright"></span>
-            <span>Batch Schedules</span>
+            <span>04 Coaching Panel</span>
+          </a>
+          <a href="#schedule" className="px-3.5 py-1.5 rounded-full bg-white/5 hover:bg-white/10 text-slate-300 border border-white/10 transition-colors flex items-center gap-1.5 hover:text-cyan-300">
+            <span className="w-1.5 h-1.5 rounded-full bg-cyan-400"></span>
+            <span>05 Daily Batches</span>
           </a>
         </div>
 
-        {/* Key Verified Badges Grid: 1 column on ultra-compact, 2 on xs & tablet, 4 on lg+ */}
-        <div className="mt-8 sm:mt-12 lg:mt-16 grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3.5 lg:gap-4 w-full max-w-5xl">
-          <div className="glass-panel rounded-xl p-3 sm:p-4 flex items-center gap-2.5 sm:gap-3 text-left">
-            <div className="p-1.5 sm:p-2 rounded-lg bg-cricket-green/20 text-cricket-bright shrink-0">
-              <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-cricket-bright" />
+        {/* Broadcast Scoreboard KPI Dashboard (Super Kings / Coaching Beyond HUD) */}
+        <div className="mt-10 sm:mt-14 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-5xl">
+          <div className="glass-panel rounded-2xl p-4 sm:p-5 text-left border border-white/10 hover:border-amber-400/50 transition-all group">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[11px] font-athletic font-bold uppercase tracking-wider text-slate-400">Google Standing</span>
+              <Star className="w-4 h-4 fill-amber-400 text-amber-400" />
             </div>
-            <div className="min-w-0">
-              <div className="text-xs sm:text-sm font-bold text-white truncate">4.8 ★ Google</div>
-              <div className="text-[10px] sm:text-xs text-cricket-muted truncate">83 Verified Reviews</div>
+            <div className="stat-number text-3xl sm:text-4xl text-white group-hover:text-amber-300 transition-colors">
+              4.8 <span className="text-base sm:text-lg font-bold text-amber-400">★</span>
             </div>
-          </div>
-
-          <div className="glass-panel rounded-xl p-3 sm:p-4 flex items-center gap-2.5 sm:gap-3 text-left">
-            <div className="p-1.5 sm:p-2 rounded-lg bg-cricket-green/20 text-cricket-bright shrink-0">
-              <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
-            </div>
-            <div className="min-w-0">
-              <div className="text-xs sm:text-sm font-bold text-white truncate">Bowenpally</div>
-              <div className="text-[10px] sm:text-xs text-cricket-muted truncate">Secunderabad</div>
+            <div className="text-[11px] sm:text-xs text-slate-400 font-sans mt-1">
+              83+ Verified Local Reviews
             </div>
           </div>
 
-          <div className="glass-panel rounded-xl p-3 sm:p-4 flex items-center gap-2.5 sm:gap-3 text-left">
-            <div className="p-1.5 sm:p-2 rounded-lg bg-cricket-green/20 text-cricket-bright shrink-0">
-              <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5" />
+          <div className="glass-panel rounded-2xl p-4 sm:p-5 text-left border border-white/10 hover:border-emerald-400/50 transition-all group">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[11px] font-athletic font-bold uppercase tracking-wider text-slate-400">Pitch Infrastructure</span>
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
             </div>
-            <div className="min-w-0">
-              <div className="text-xs sm:text-sm font-bold text-white truncate">Dedicated Nets</div>
-              <div className="text-[10px] sm:text-xs text-cricket-muted truncate">Turf Pitch Lanes</div>
+            <div className="stat-number text-3xl sm:text-4xl text-white group-hover:text-cricket-bright transition-colors">
+              8+ <span className="text-base sm:text-lg font-bold text-emerald-400">NETS</span>
+            </div>
+            <div className="text-[11px] sm:text-xs text-slate-400 font-sans mt-1">
+              Turf, Cement & Astro Lanes
             </div>
           </div>
 
-          <div className="glass-panel rounded-xl p-3 sm:p-4 flex items-center gap-2.5 sm:gap-3 text-left">
-            <div className="p-1.5 sm:p-2 rounded-lg bg-cricket-green/20 text-cricket-bright shrink-0">
-              <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
+          <div className="glass-panel rounded-2xl p-4 sm:p-5 text-left border border-white/10 hover:border-cricket-bright/50 transition-all group">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[11px] font-athletic font-bold uppercase tracking-wider text-slate-400">League Success</span>
+              <Trophy className="w-4 h-4 text-cricket-bright" />
             </div>
-            <div className="min-w-0">
-              <div className="text-xs sm:text-sm font-bold text-white truncate">Daily Batches</div>
-              <div className="text-[10px] sm:text-xs text-cricket-muted truncate">Morning & Evening</div>
+            <div className="stat-number text-3xl sm:text-4xl text-white group-hover:text-cricket-bright transition-colors">
+              15+ <span className="text-base sm:text-lg font-bold text-cricket-bright">CAPS</span>
+            </div>
+            <div className="text-[11px] sm:text-xs text-slate-400 font-sans mt-1">
+              HCA League & State Selections
+            </div>
+          </div>
+
+          <div className="glass-panel rounded-2xl p-4 sm:p-5 text-left border border-white/10 hover:border-cyan-400/50 transition-all group">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[11px] font-athletic font-bold uppercase tracking-wider text-slate-400">Operating Clock</span>
+              <Zap className="w-4 h-4 text-cyan-400" />
+            </div>
+            <div className="stat-number text-3xl sm:text-4xl text-white group-hover:text-cyan-300 transition-colors">
+              6 AM - 11 PM
+            </div>
+            <div className="text-[11px] sm:text-xs text-slate-400 font-sans mt-1">
+              Match-Grade Floodlit Sessions
             </div>
           </div>
         </div>
 
+      </div>
+
+      {/* Broadcast Live Ticker Strip (Super Kings Academy style) */}
+      <div className="relative z-10 w-full mt-10 bg-black/80 border-y border-white/10 backdrop-blur-md py-2.5 overflow-hidden">
+        <div className="animate-ticker flex items-center gap-8 text-xs font-athletic font-bold uppercase tracking-wider text-slate-300">
+          <span className="flex items-center gap-2 text-cricket-bright shrink-0">
+            <Flame className="w-3.5 h-3.5 fill-cricket-bright" /> 2026 CRICKET ADMISSIONS OPEN
+          </span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-white">MORNING (6:00 AM) & EVENING (4:30 PM) BATCHES</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-amber-300">OFFICIAL HCA DIVISION LEAGUE MATCH SIMULATIONS</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-white">8+ HIGH-SPEC PRACTICE NETS WITH FLOODLIGHTS</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-cyan-300">140+ KM/H BOLA BOWLING MACHINE REPS</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-white">1:8 COACH-TO-PLAYER DRILL RATIO</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-cricket-bright">4.8★ GOOGLE RATED (83+ VERIFIED REVIEWS)</span>
+          <span className="text-slate-500">•</span>
+          
+          {/* Repeated for continuous marquee scroll */}
+          <span className="flex items-center gap-2 text-cricket-bright shrink-0">
+            <Flame className="w-3.5 h-3.5 fill-cricket-bright" /> 2026 CRICKET ADMISSIONS OPEN
+          </span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-white">MORNING (6:00 AM) & EVENING (4:30 PM) BATCHES</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-amber-300">OFFICIAL HCA DIVISION LEAGUE MATCH SIMULATIONS</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-white">8+ HIGH-SPEC PRACTICE NETS WITH FLOODLIGHTS</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-cyan-300">140+ KM/H BOLA BOWLING MACHINE REPS</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-white">1:8 COACH-TO-PLAYER DRILL RATIO</span>
+          <span className="text-slate-500">•</span>
+          <span className="shrink-0 text-cricket-bright">4.8★ GOOGLE RATED (83+ VERIFIED REVIEWS)</span>
+        </div>
       </div>
     </section>
   );

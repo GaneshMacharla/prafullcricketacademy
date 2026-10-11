@@ -30,15 +30,15 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
         {/* Section 1: Day-1 Trial Assessment Protocol */}
         <div className="mb-20 sm:mb-28">
           <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-cricket-bright font-athletic text-xs font-bold uppercase tracking-wider mb-3">
               <UserCheck className="w-3.5 h-3.5" />
               <span>Day-1 Player Assessment • Zero Risk Trial</span>
             </div>
 
-            <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-              What Happens on Your Free Trial Day
+            <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+              WHAT HAPPENS ON YOUR FREE TRIAL DAY
             </h2>
-            <p className="mt-4 max-w-2xl text-slate-300 text-sm sm:text-base md:text-lg">
+            <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
               We don't believe in generic sales pitches. Come experience real coaching, test your skills in the nets, and receive a coach evaluation.
             </p>
           </div>
@@ -47,29 +47,29 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
             {academy.trialSteps.map((step) => (
               <div
                 key={step.step}
-                className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 bg-gradient-to-b from-white/[0.03] to-black/50 flex flex-col justify-between relative group hover:border-cricket-green/50 transition-all"
+                className="glass-panel rounded-3xl p-6 sm:p-8 border border-white/10 bg-gradient-to-b from-white/[0.03] to-black/50 flex flex-col justify-between relative group hover:border-emerald-400/50 transition-all shadow-lg"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="w-10 h-10 rounded-xl bg-cricket-green/20 border border-cricket-green/30 text-cricket-bright font-extrabold text-sm flex items-center justify-center">
+                    <span className="w-11 h-11 rounded-2xl bg-cricket-green/20 border border-cricket-green/30 text-cricket-bright font-athletic font-black text-sm flex items-center justify-center">
                       {step.step}
                     </span>
-                    <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/5 text-slate-300 border border-white/10">
+                    <span className="px-3 py-1 rounded-full text-xs font-athletic font-bold uppercase tracking-wider bg-white/5 text-slate-300 border border-white/10">
                       {step.duration}
                     </span>
                   </div>
 
-                  <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-cricket-bright transition-colors">
+                  <h3 className="athletic-title text-xl sm:text-2xl font-black text-white mb-2 group-hover:text-cricket-bright transition-colors">
                     {step.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6 font-sans">
                     {step.description}
                   </p>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-black/40 border border-emerald-500/20 text-xs text-emerald-300 font-semibold flex items-start gap-2">
-                  <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="p-4 rounded-2xl bg-black/50 border border-emerald-500/20 text-xs text-emerald-300 font-semibold flex items-start gap-2.5 font-sans">
+                  <CheckCircle className="w-4 h-4 text-cricket-bright shrink-0 mt-0.5" />
                   <span>{step.deliverable}</span>
                 </div>
               </div>
@@ -77,19 +77,19 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
           </div>
 
           {/* Trial Booking Bar */}
-          <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-emerald-950/60 via-[#0a1510] to-black/80 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-center sm:text-left">
-              <div className="text-base sm:text-lg font-bold text-white">
-                Ready to take the pitch for your assessment?
+          <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-emerald-950/70 via-[#0a1510] to-black/90 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-xl">
+            <div className="text-center sm:text-left space-y-1">
+              <div className="athletic-title text-lg sm:text-2xl font-black text-white">
+                READY TO TAKE THE PITCH FOR YOUR ASSESSMENT?
               </div>
-              <div className="text-xs sm:text-sm text-slate-300">
+              <div className="text-xs sm:text-sm text-slate-300 font-sans">
                 Equipment is provided. Sessions available daily between 6:00 AM – 11:00 AM & 4:30 PM – 7:00 PM.
               </div>
             </div>
 
             <button
               onClick={onOpenTrialModal}
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-xs sm:text-sm text-black bg-gradient-to-r from-cricket-bright to-emerald-400 hover:from-emerald-400 hover:to-cricket-bright shadow-glow transition-all shrink-0"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-athletic font-black text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow transition-all shrink-0"
             >
               <Calendar className="w-4 h-4" />
               <span>Book Free Trial Assessment</span>
@@ -100,26 +100,26 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
         {/* Section 2: Parent & Player FAQs */}
         <div id="faqs" className="max-w-4xl mx-auto">
           <div className="flex flex-col items-center text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 font-athletic text-xs font-bold uppercase tracking-wider mb-2">
               <HelpCircle className="w-3.5 h-3.5 text-cricket-bright" />
               <span>Frequently Asked Questions</span>
             </div>
-            <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
-              Everything Parents Want to Know
+            <h3 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+              EVERYTHING PARENTS WANT TO KNOW
             </h3>
-            <p className="mt-2 text-xs sm:text-sm text-slate-400">
+            <p className="mt-2 text-xs sm:text-sm text-slate-400 font-sans">
               Clear, transparent answers on equipment, batch flexibility, coach qualifications, and match exposure.
             </p>
 
             {/* Category Filter Pills */}
-            <div className="flex flex-wrap items-center justify-center gap-1.5 sm:gap-2 mt-6">
+            <div className="flex flex-wrap items-center justify-center gap-2 mt-6">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setSelectedCategory(cat)}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+                  className={`px-4 py-2 rounded-full font-athletic text-xs font-bold uppercase tracking-wider transition-all ${
                     selectedCategory === cat
-                      ? 'bg-cricket-bright text-black font-bold shadow-glow'
+                      ? 'bg-cricket-bright text-black font-black shadow-glow'
                       : 'bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/10'
                   }`}
                 >

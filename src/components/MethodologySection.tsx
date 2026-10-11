@@ -32,15 +32,15 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
         
         {/* Section Header (Coaching Beyond inspired) */}
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-cricket-bright font-athletic text-xs font-bold uppercase tracking-wider mb-3">
+            <Sparkles className="w-3.5 h-3.5 text-cricket-bright" />
             <span>The High-Performance Framework • Coaching Beyond Pedagogy</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            The 4-Pillar PCA Development System
+          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            THE 4-PILLAR PCA DEVELOPMENT SYSTEM
           </h2>
-          <p className="mt-4 max-w-2xl text-slate-300 text-sm sm:text-base md:text-lg">
+          <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
             Elite cricketers are not made by random net practice. Our structured curriculum unites technical biomechanics, tactical chess, sports science conditioning, and warrior temperament.
           </p>
 
@@ -53,23 +53,23 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
                 <button
                   key={pillar.id}
                   onClick={() => setActivePillarId(pillar.id)}
-                  className={`p-3.5 sm:p-4 rounded-xl text-left transition-all border flex flex-col justify-between group ${
+                  className={`p-4 sm:p-5 rounded-2xl text-left transition-all border flex flex-col justify-between group ${
                     isSelected
-                      ? 'bg-gradient-to-b from-emerald-950/80 to-[#0a1510] border-emerald-400/60 shadow-lg shadow-emerald-950/50 scale-[1.02]'
+                      ? 'bg-gradient-to-b from-emerald-950/90 to-[#0a1510] border-cricket-bright shadow-lg shadow-emerald-950/60 scale-[1.02]'
                       : 'bg-white/[0.03] hover:bg-white/[0.07] border-white/10 hover:border-white/20'
                   }`}
                 >
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className={`text-[11px] font-extrabold font-mono tracking-widest ${
-                      isSelected ? 'text-emerald-400' : 'text-slate-500'
+                    <span className={`text-[11px] font-athletic font-extrabold uppercase tracking-widest ${
+                      isSelected ? 'text-cricket-bright' : 'text-slate-500'
                     }`}>
                       PILLAR {pillar.pillarNumber}
                     </span>
                     <Icon className={`w-4 h-4 sm:w-5 sm:h-5 ${
-                      isSelected ? 'text-emerald-400' : 'text-slate-400 group-hover:text-white'
+                      isSelected ? 'text-cricket-bright' : 'text-slate-400 group-hover:text-white'
                     }`} />
                   </div>
-                  <div className={`text-xs sm:text-sm font-bold leading-snug line-clamp-2 ${
+                  <div className={`font-athletic text-sm sm:text-base font-black uppercase tracking-wide leading-tight ${
                     isSelected ? 'text-white' : 'text-slate-300 group-hover:text-white'
                   }`}>
                     {pillar.title.split('&')[0]}
@@ -81,36 +81,36 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
         </div>
 
         {/* Active Pillar Detailed Spotlight Card */}
-        <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-emerald-500/30 bg-gradient-to-br from-[#0a1510] via-[#070e0a] to-[#040806] shadow-2xl relative overflow-hidden">
+        <div className="glass-panel rounded-3xl p-6 sm:p-10 border border-emerald-500/30 bg-gradient-to-br from-[#0c1813] via-[#08110d] to-[#040806] shadow-2xl relative overflow-hidden">
           
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
             {/* Left Column: Pillar Breakdown & Quote */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 text-xs font-semibold uppercase tracking-wider mb-3">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-cricket-bright border border-emerald-500/20 font-athletic text-xs font-bold uppercase tracking-wider mb-3">
                   <ActiveIcon className="w-3.5 h-3.5" />
                   <span>Pillar {activePillar.pillarNumber} Overview</span>
                 </div>
-                <h3 className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <h3 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
                   {activePillar.title}
                 </h3>
-                <p className="text-sm sm:text-base font-semibold text-emerald-400 mt-1">
+                <p className="font-athletic text-sm sm:text-base font-bold uppercase tracking-wider text-emerald-400 mt-1">
                   {activePillar.tagline}
                 </p>
-                <p className="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
+                <p className="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed font-sans">
                   {activePillar.description}
                 </p>
               </div>
 
               {/* Coach Philosophy Quote */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-white/[0.03] border border-white/10 relative">
+              <div className="p-5 rounded-2xl bg-white/[0.03] border border-white/10 relative shadow-inner">
                 <Quote className="w-8 h-8 text-emerald-500/20 absolute top-3 right-4" />
-                <p className="text-xs sm:text-sm italic text-slate-200 leading-relaxed pr-6">
+                <p className="text-xs sm:text-sm italic text-slate-200 leading-relaxed pr-6 font-sans">
                   "{activePillar.quote}"
                 </p>
-                <div className="mt-2 text-xs font-bold text-emerald-400">
-                  — {activePillar.coach}
+                <div className="mt-3 text-xs font-athletic font-bold uppercase tracking-wider text-cricket-bright">
+                  — {activePillar.coach} • PCA Coaching Panel
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
               <div className="pt-2">
                 <button
                   onClick={onOpenTrialModal}
-                  className="inline-flex items-center gap-2.5 px-6 py-3 rounded-xl font-bold text-sm text-black bg-gradient-to-r from-cricket-bright to-emerald-400 hover:from-emerald-400 hover:to-cricket-bright shadow-glow transition-all transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-athletic font-black text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5"
                 >
                   <span>Experience This in a Free Trial</span>
                   <ArrowRight className="w-4 h-4" />

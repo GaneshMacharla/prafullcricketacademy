@@ -21,14 +21,14 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
         
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-12 sm:mb-16">
-          <span className="text-xs sm:text-sm font-bold tracking-widest uppercase text-cricket-bright bg-cricket-green/10 border border-cricket-green/20 px-3 py-1 rounded-md mb-3">
-            Authentic Photo Gallery
+          <span className="athletic-badge text-xs sm:text-sm tracking-wider text-cricket-bright bg-cricket-green/10 border border-cricket-green/30 px-4 py-1.5 rounded-full mb-3">
+            Real Action • Authentic Photo Gallery
           </span>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Life at Prafull Cricket Academy
+          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            LIFE AT PRAFULL CRICKET ACADEMY
           </h2>
-          <p className="mt-4 max-w-2xl text-slate-300 text-base sm:text-lg">
-            Genuinely sourced from the official Google Maps listing for PCA – Prafull Cricket Academy. No stock photos, no generic replacements.
+          <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
+            Genuinely sourced from the official Google Maps listing for PCA – Prafull Cricket Academy. Real students, match conditions, and dedicated nets.
           </p>
 
           {/* Category Filter Pills */}
@@ -37,9 +37,9 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
+                className={`px-5 py-2.5 rounded-full font-athletic text-xs sm:text-sm font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 ${
                   selectedCategory === cat
-                    ? 'bg-cricket-bright text-black shadow-glow font-bold'
+                    ? 'bg-cricket-bright text-black shadow-glow font-black'
                     : 'bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/10'
                 }`}
               >
