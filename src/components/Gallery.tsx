@@ -33,7 +33,9 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   const [isVideoPlaying, setIsVideoPlaying] = useState<boolean>(false);
   const [videoMuted, setVideoMuted] = useState<boolean>(true);
+  const [isInView, setIsInView] = useState<boolean>(true);
   
+  const sectionRef = useRef<HTMLElement>(null);
   const thumbnailListRef = useRef<HTMLDivElement>(null);
   const videoPlayerRef = useRef<HTMLVideoElement>(null);
 
@@ -59,9 +61,25 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
 
   const activeItem: GalleryItem | undefined = filteredItems[currentSlideIndex] || filteredItems[0];
 
-  // Auto-play timer for slideshow (advances every 5 seconds if not paused)
+  // Pause slideshow auto-play when the gallery section is not visible on screen
   useEffect(() => {
-    if (!isAutoPlaying || isHovered || isVideoPlaying || filteredItems.length <= 1) {
+    const el = sectionRef.current;
+    if (!el || typeof IntersectionObserver === 'undefined') return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
+  // Auto-play timer for slideshow (advances every 5.5 seconds only when section is visible in viewport)
+  useEffect(() => {
+    if (!isAutoPlaying || !isInView || isHovered || isVideoPlaying || filteredItems.length <= 1) {
       return;
     }
 
@@ -70,20 +88,27 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
     }, 5500);
 
     return () => clearInterval(timer);
-  }, [isAutoPlaying, isHovered, isVideoPlaying, filteredItems.length]);
+  }, [isAutoPlaying, isInView, isHovered, isVideoPlaying, filteredItems.length]);
 
-  // Keep active thumbnail centered in filmstrip
+  // Keep active thumbnail centered in filmstrip strictly inside the container (never scrolls the window/page)
   useEffect(() => {
-    if (thumbnailListRef.current) {
-      const activeThumb = thumbnailListRef.current.children[currentSlideIndex] as HTMLElement;
-      if (activeThumb) {
-        activeThumb.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
-        });
-      }
-    }
+    const container = thumbnailListRef.current;
+    if (!container) return;
+
+    const activeThumb = container.children[currentSlideIndex] as HTMLElement | undefined;
+    if (!activeThumb) return;
+
+    const containerRect = container.getBoundingClientRect();
+    const thumbRect = activeThumb.getBoundingClientRect();
+
+    // Calculate relative offset within the horizontal filmstrip
+    const relativeThumbLeft = thumbRect.left - containerRect.left + container.scrollLeft;
+    const targetScrollLeft = relativeThumbLeft - (container.clientWidth / 2) + (thumbRect.width / 2);
+
+    container.scrollTo({
+      left: Math.max(0, targetScrollLeft),
+      behavior: 'smooth'
+    });
   }, [currentSlideIndex]);
 
   const handleNextSlide = () => {
@@ -109,7 +134,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
   };
 
   return (
-    <section id="gallery" className="py-20 sm:py-28 relative bg-[#070b08] border-t border-white/5 overflow-hidden">
+    <section id="gallery" ref={sectionRef} className="py-20 sm:py-28 relative bg-[#070b08] border-t border-white/5 overflow-hidden">
       {/* Background athletic glows */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-cricket-green/5 blur-[120px] pointer-events-none rounded-full"></div>
       <div className="absolute bottom-10 right-10 w-[400px] h-[300px] bg-amber-500/5 blur-[100px] pointer-events-none rounded-full"></div>
@@ -322,7 +347,7 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
             <div className="bg-[#050906] px-4 py-3 border-t border-white/10">
               <div 
                 ref={thumbnailListRef}
-                className="flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth py-1"
+                className="relative flex items-center gap-2.5 overflow-x-auto no-scrollbar scroll-smooth py-1"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 {filteredItems.map((item, idx) => {
@@ -450,8 +475,6 @@ export const Gallery: React.FC<GalleryProps> = ({ onOpenImageLightbox }) => {
                       onClick={(e) => {
                         e.stopPropagation();
                         setCurrentSlideIndex(index);
-                        const sliderEl = document.getElementById('gallery');
-                        if (sliderEl) sliderEl.scrollIntoView({ behavior: 'smooth' });
                       }}
                       className="absolute top-2.5 right-2.5 p-1.5 rounded-lg bg-black/75 hover:bg-cricket-bright text-white hover:text-black border border-white/10 transition-colors text-[10px] font-athletic font-bold uppercase tracking-wider"
                       title="Load in Slideshow Viewer"
