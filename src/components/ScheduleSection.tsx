@@ -31,7 +31,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onOpenTrialMod
             <span>Batch Timings & Daily Architecture • Super Kings Model</span>
           </div>
 
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             BATCH TIMINGS & DAILY TRAINING FLOW
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -56,7 +56,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onOpenTrialMod
                   </span>
                 </div>
 
-                <h3 className="athletic-title text-xl font-black text-white group-hover:text-cricket-bright transition-colors">
+                <h3 className="athletic-title text-xl font-bold text-white group-hover:text-cricket-bright transition-colors">
                   {batch.name}
                 </h3>
 
@@ -95,7 +95,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onOpenTrialMod
             <span className="font-athletic text-xs font-bold uppercase tracking-wider text-emerald-400">
               The 2-Hour Training Blueprint
             </span>
-            <h3 className="athletic-title text-2xl sm:text-4xl font-black text-white mt-1">
+            <h3 className="athletic-title text-xl sm:text-3xl font-bold text-white mt-1 tracking-normal">
               INSIDE A PCA DAILY COACHING SESSION
             </h3>
             <p className="text-xs sm:text-sm text-slate-300 mt-2">
@@ -113,7 +113,7 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onOpenTrialMod
                 >
                   <div>
                     <div className="flex items-center justify-between gap-2 mb-3">
-                      <span className="w-7 h-7 rounded-lg bg-cricket-green/20 text-cricket-bright font-extrabold text-xs flex items-center justify-center">
+                      <span className="w-7 h-7 rounded-lg bg-cricket-green/20 text-cricket-bright font-bold text-xs flex items-center justify-center">
                         {phase.phase}
                       </span>
                       <span className="text-xs font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
@@ -147,19 +147,19 @@ export const ScheduleSection: React.FC<ScheduleSectionProps> = ({ onOpenTrialMod
           {/* Bottom Academy Standards Assurance */}
           <div className="mt-8 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div className="p-3 rounded-xl bg-white/[0.02]">
-              <div className="text-lg sm:text-xl font-extrabold text-white">1 : 8</div>
+              <div className="text-lg sm:text-xl font-bold text-white">1 : 8</div>
               <div className="text-[11px] text-slate-400">Coach-to-Student Ratio</div>
             </div>
             <div className="p-3 rounded-xl bg-white/[0.02]">
-              <div className="text-lg sm:text-xl font-extrabold text-white">Turf & Net</div>
+              <div className="text-lg sm:text-xl font-bold text-white">Turf & Net</div>
               <div className="text-[11px] text-slate-400">Enclosed Safety Lanes</div>
             </div>
             <div className="p-3 rounded-xl bg-white/[0.02]">
-              <div className="text-lg sm:text-xl font-extrabold text-white">Video Analysis</div>
+              <div className="text-lg sm:text-xl font-bold text-white">Video Analysis</div>
               <div className="text-[11px] text-slate-400">Slow-Motion Feedback</div>
             </div>
             <div className="p-3 rounded-xl bg-white/[0.02]">
-              <div className="text-lg sm:text-xl font-extrabold text-white">Flexible Batches</div>
+              <div className="text-lg sm:text-xl font-bold text-white">Flexible Batches</div>
               <div className="text-[11px] text-slate-400">Exam-Friendly Balancing</div>
             </div>
           </div>

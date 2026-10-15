@@ -35,7 +35,7 @@ export const Programs: React.FC<ProgramsProps> = ({ onOpenTrialModal }) => {
           <span className="athletic-badge text-xs sm:text-sm tracking-wider text-cricket-bright bg-cricket-green/10 border border-cricket-green/30 px-4 py-1.5 rounded-full mb-3">
             Structured Modules • Grassroots to Advanced
           </span>
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             CRICKET COACHING CURRICULUMS
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -91,7 +91,7 @@ export const Programs: React.FC<ProgramsProps> = ({ onOpenTrialModal }) => {
                     </div>
                   </div>
 
-                  <h3 className="athletic-title text-2xl sm:text-3xl font-black text-white mb-1 group-hover:text-cricket-bright transition-colors">
+                  <h3 className="athletic-title text-2xl sm:text-3xl font-bold text-white mb-1 group-hover:text-cricket-bright transition-colors">
                     {prog.name}
                   </h3>
                   <div className="font-athletic text-xs font-bold uppercase tracking-wider text-emerald-400 mb-3">
@@ -125,7 +125,7 @@ export const Programs: React.FC<ProgramsProps> = ({ onOpenTrialModal }) => {
 
                   <button
                     onClick={() => onOpenTrialModal(prog.name)}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-athletic font-black text-xs uppercase tracking-wider bg-cricket-green/20 hover:bg-cricket-bright text-cricket-bright hover:text-black border border-cricket-green/40 hover:border-transparent transition-all shadow-glow"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full font-athletic font-bold text-xs uppercase tracking-wider bg-cricket-green/20 hover:bg-cricket-bright text-cricket-bright hover:text-black border border-cricket-green/40 hover:border-transparent transition-all shadow-glow"
                   >
                     <span>Request Trial</span>
                     <ArrowRight className="w-3.5 h-3.5" />

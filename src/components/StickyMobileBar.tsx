@@ -35,7 +35,7 @@ export const StickyMobileBar: React.FC<StickyMobileBarProps> = ({ onOpenTrialMod
         {/* Book Trial CTA */}
         <button
           onClick={onOpenTrialModal}
-          className="flex flex-col items-center justify-center gap-0.5 py-2 px-1 rounded-xl bg-gradient-to-r from-cricket-bright to-emerald-500 text-black font-extrabold shadow-glow active:scale-95 transition-all min-h-[46px]"
+          className="flex flex-col items-center justify-center gap-0.5 py-2 px-1 rounded-xl bg-gradient-to-r from-cricket-bright to-emerald-500 text-black font-bold shadow-glow active:scale-95 transition-all min-h-[46px]"
           aria-label="Book a Trial Session"
         >
           <Calendar className="w-3.5 h-3.5 shrink-0" />

@@ -48,12 +48,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
             {/* Brand Logo & Name */}
             <a href="#" className="flex items-center gap-2.5 sm:gap-3 group focus:outline-none rounded-lg shrink-0">
               <div className="relative w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gradient-to-br from-red-600 via-red-700 to-amber-700 border border-amber-400/40 flex items-center justify-center shadow-md group-hover:scale-105 transition-transform shrink-0">
-                <span className="font-athletic font-black text-white text-xs sm:text-base tracking-tight">PCA</span>
+                <span className="font-athletic font-bold text-white text-xs sm:text-base tracking-tight">PCA</span>
                 <span className="absolute -bottom-0.5 -right-0.5 w-2.5 h-2.5 sm:w-3 sm:h-3 bg-cricket-bright rounded-full border-2 border-black animate-pulse"></span>
               </div>
               <div className="flex flex-col min-w-0">
                 <div className="flex items-center gap-1.5 sm:gap-2">
-                  <span className="font-athletic font-black text-white text-sm sm:text-lg lg:text-xl tracking-wide uppercase group-hover:text-cricket-bright transition-colors truncate">
+                  <span className="font-athletic font-bold text-white text-sm sm:text-lg lg:text-xl tracking-wide uppercase group-hover:text-cricket-bright transition-colors truncate">
                     Prafull Cricket Academy
                   </span>
                   <span className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.2 rounded text-[10px] font-athletic font-bold uppercase tracking-wider bg-amber-400/15 text-amber-300 border border-amber-400/30 shrink-0">
@@ -92,7 +92,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
 
               <button
                 onClick={onOpenTrialModal}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-athletic font-black text-xs tracking-wider uppercase bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright text-black shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-cricket-bright shrink-0"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full font-athletic font-bold text-xs tracking-wider uppercase bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright text-black shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-cricket-bright shrink-0"
               >
                 <Calendar className="w-3.5 h-3.5" />
                 <span>Book Assessment</span>
@@ -103,7 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
             <div className="flex xl:hidden items-center gap-2 shrink-0">
               <button
                 onClick={onOpenTrialModal}
-                className="px-3 py-1.5 text-[11px] font-athletic font-black uppercase tracking-wider rounded-full bg-gradient-to-r from-cricket-bright to-emerald-400 text-black shadow-glow"
+                className="px-3 py-1.5 text-[11px] font-athletic font-bold uppercase tracking-wider rounded-full bg-gradient-to-r from-cricket-bright to-emerald-400 text-black shadow-glow"
               >
                 Book Trial
               </button>
@@ -150,7 +150,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenTrialModal }) => {
                   setIsMobileMenuOpen(false);
                   onOpenTrialModal();
                 }}
-                className="w-full py-3 rounded-full font-athletic font-black uppercase tracking-wider text-xs text-black bg-gradient-to-r from-cricket-bright to-emerald-400 shadow-glow"
+                className="w-full py-3 rounded-full font-athletic font-bold uppercase tracking-wider text-xs text-black bg-gradient-to-r from-cricket-bright to-emerald-400 shadow-glow"
               >
                 Schedule Free Assessment Trial →
               </button>

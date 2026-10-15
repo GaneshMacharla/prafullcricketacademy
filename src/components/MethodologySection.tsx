@@ -37,7 +37,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
             <span>The High-Performance Framework • Coaching Beyond Pedagogy</span>
           </div>
 
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             THE 4-PILLAR PCA DEVELOPMENT SYSTEM
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -60,7 +60,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
                   }`}
                 >
                   <div className="flex items-center justify-between gap-2 mb-2">
-                    <span className={`text-[11px] font-athletic font-extrabold uppercase tracking-widest ${
+                    <span className={`text-[11px] font-athletic font-bold uppercase tracking-widest ${
                       isSelected ? 'text-cricket-bright' : 'text-slate-500'
                     }`}>
                       PILLAR {pillar.pillarNumber}
@@ -69,7 +69,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
                       isSelected ? 'text-cricket-bright' : 'text-slate-400 group-hover:text-white'
                     }`} />
                   </div>
-                  <div className={`font-athletic text-sm sm:text-base font-black uppercase tracking-wide leading-tight ${
+                  <div className={`font-athletic text-sm sm:text-base font-bold uppercase tracking-wide leading-tight ${
                     isSelected ? 'text-white' : 'text-slate-300 group-hover:text-white'
                   }`}>
                     {pillar.title.split('&')[0]}
@@ -92,7 +92,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
                   <ActiveIcon className="w-3.5 h-3.5" />
                   <span>Pillar {activePillar.pillarNumber} Overview</span>
                 </div>
-                <h3 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+                <h3 className="athletic-title text-xl sm:text-3xl lg:text-4xl font-bold text-white tracking-normal">
                   {activePillar.title}
                 </h3>
                 <p className="font-athletic text-sm sm:text-base font-bold uppercase tracking-wider text-emerald-400 mt-1">
@@ -118,7 +118,7 @@ export const MethodologySection: React.FC<MethodologySectionProps> = ({ onOpenTr
               <div className="pt-2">
                 <button
                   onClick={onOpenTrialModal}
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-athletic font-black text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5"
+                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full font-athletic font-bold text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5"
                 >
                   <span>Experience This in a Free Trial</span>
                   <ArrowRight className="w-4 h-4" />

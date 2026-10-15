@@ -22,13 +22,17 @@ export interface Facility {
 
 export interface GalleryItem {
   id: string;
+  type?: 'image' | 'video';
   title: string;
-  category: 'Training' | 'Nets' | 'Ground' | 'Coaching' | 'Squad';
+  category: 'Squad' | 'Trophies' | 'Coaching' | 'Ground' | 'Celebration';
   image: string;
+  videoSrc?: string;
   alt: string;
   caption: string;
   sourceNote: string;
   aspect: 'landscape' | 'portrait' | 'panorama';
+  duration?: string;
+  badge?: string;
 }
 
 export interface Coach {
@@ -313,7 +317,7 @@ export const academy: AcademyData = {
       ],
       ageGroups: "Ages 7 to 19+ (Pace & Spin)",
       schedule: "Morning & Evening Batches",
-      image: "/images/academy/pca-gmaps-04.jpg"
+      image: "/gallery/pca-trophy-presentation-lineup.jpg"
     },
     {
       id: "fielding",
@@ -346,7 +350,7 @@ export const academy: AcademyData = {
       ],
       ageGroups: "Tailored to Player Age Groups",
       schedule: "Pre-Session & Specialized Batches",
-      image: "/images/academy/pca-gmaps-02.jpg"
+      image: "/gallery/pca-full-squad-ground-lineup.jpg"
     }
   ],
 
@@ -362,8 +366,8 @@ export const academy: AcademyData = {
         "Natural open ground surroundings",
         "Floodlight pole infrastructure"
       ],
-      image: "/images/academy/pca-gmaps-01.jpg",
-      sourceNote: "Verified from PCA Google Maps listing photo"
+      image: "/gallery/pca-champions-daylight-ground.jpg",
+      sourceNote: "Official PCA Academy practice grounds & nets"
     },
     {
       id: "ground",
@@ -376,8 +380,8 @@ export const academy: AcademyData = {
         "Target bowling & fielding markers",
         "Peaceful greenery setting"
       ],
-      image: "/images/academy/pca-gmaps-02.jpg",
-      sourceNote: "Verified from PCA Google Maps listing photo"
+      image: "/gallery/pca-full-squad-ground-lineup.jpg",
+      sourceNote: "Official PCA Academy open grass training outfield"
     },
     {
       id: "coaching-zone",
@@ -390,52 +394,362 @@ export const academy: AcademyData = {
         "One-on-one technical video & posture guidance",
         "Ground practice space"
       ],
-      image: "/images/academy/pca-gmaps-04.jpg",
-      sourceNote: "Verified from PCA Google Maps listing photo"
+      image: "/gallery/pca-coach-prafull-award-handshake.jpg",
+      sourceNote: "Head Coach Prafull & technical mentorship session"
     }
   ],
 
-  // Dynamically populated strictly with verified Google Maps photos
+  // Modern authentic high-resolution photos and videos directly from PCA grounds & tournaments
   gallery: [
     {
-      id: "g1",
-      title: "Practice Nets & Pitch Panorama",
-      category: "Nets",
-      image: "/images/academy/pca-gmaps-01.jpg",
-      alt: "Panoramic view of PCA Bowenpally practice nets and cricket pitch",
-      caption: "Panoramic view of enclosed nets, synthetic turf wicket, and training ground at Bowenpally.",
-      sourceNote: "Google Maps Listing Verified Photo",
-      aspect: "panorama"
+      id: "g-vid-1",
+      type: "video",
+      title: "Dussehra Cup Platinum Champions & Trophies",
+      category: "Celebration",
+      image: "/gallery/pca-team-dussehra-winners.jpg",
+      videoSrc: "/gallery/pca-dussehra-cup-platinum-celebration.mp4",
+      alt: "PCA cricket academy celebration video with Dussehra Cup Platinum trophies",
+      caption: "Championship showcase video displaying the grand Dussehra Cup Platinum trophy, Best Batsman, Best Bowler cups, and full team cheer.",
+      sourceNote: "Authentic Academy Match Video",
+      aspect: "landscape",
+      duration: "1:15",
+      badge: "Platinum Champions"
     },
     {
-      id: "g2",
-      title: "Morning Squad Conditioning & Warm-ups",
-      category: "Ground",
-      image: "/images/academy/pca-gmaps-02.jpg",
-      alt: "Academy students in whites doing morning warm-ups in a circle on the open grass outfield",
-      caption: "Junior academy squad conducting structured morning warm-ups and dynamic stretches under open skies.",
-      sourceNote: "Google Maps Listing Verified Photo",
-      aspect: "landscape"
+      id: "g-pic-1",
+      type: "image",
+      title: "PCA Academy Squad & Coaches Championship Glory",
+      category: "Trophies",
+      image: "/gallery/pca-champions-team-trophies-wide.jpg",
+      alt: "Full PCA academy squad and coaching staff seated with Dussehra Cup trophies",
+      caption: "Head Coach Prafull, senior trainers, and academy players proudly displaying tournament silverware in their official navy & gold uniforms.",
+      sourceNote: "Official PCA Academy Grounds",
+      aspect: "landscape",
+      badge: "Championship Squad"
     },
     {
-      id: "g3",
-      title: "Junior Academy Students on Pitch",
-      category: "Squad",
-      image: "/images/academy/pca-gmaps-03.jpg",
-      alt: "Young cricket academy students in white uniforms holding cricket bats on the ground",
-      caption: "Aspiring young cricketers in their official white training kits with cricket bats at PCA ground.",
-      sourceNote: "Google Maps Listing Verified Photo",
-      aspect: "landscape"
-    },
-    {
-      id: "g4",
-      title: "Bowling Biomechanics Coaching Session",
+      id: "g-pic-2",
+      type: "image",
+      title: "Coach Prafull Congratulating Junior Medal Winner",
       category: "Coaching",
-      image: "/images/academy/pca-gmaps-04.jpg",
-      alt: "Academy coach working with young bowler on high-arm extension using training hurdles",
-      caption: "Coach providing hands-on instruction on bowling shoulder alignment, arm height, and release point.",
-      sourceNote: "Google Maps Listing Verified Photo",
-      aspect: "portrait"
+      image: "/gallery/pca-coach-prafull-award-handshake.jpg",
+      alt: "Coach Prafull shaking hands with junior cricket player wearing gold medal and PCA jersey",
+      caption: "Coach Prafull personally congratulating an academy star following a triumphant tournament campaign.",
+      sourceNote: "Official PCA Academy Presentation",
+      aspect: "portrait",
+      badge: "Head Coach Mentorship"
+    },
+    {
+      id: "g-vid-2",
+      type: "video",
+      title: "Aryan Awarded Best Bowler of Tournament",
+      category: "Trophies",
+      image: "/gallery/pca-award-stage-sideview.jpg",
+      videoSrc: "/gallery/pca-best-bowler-award-aryan.mp4",
+      alt: "Aryan Cheera receiving Best Bowler trophy from academy coach",
+      caption: "Live video of Aryan being announced as the Best Bowler of the tournament with thunderous applause from teammates.",
+      sourceNote: "Tournament Presentation Video",
+      aspect: "landscape",
+      duration: "0:21",
+      badge: "Best Bowler Trophy"
+    },
+    {
+      id: "g-pic-3",
+      type: "image",
+      title: "Grand Academy Panorama - Trophies & Champions",
+      category: "Trophies",
+      image: "/gallery/pca-squad-panorama-trophy-display.jpg",
+      alt: "Panoramic view of the entire PCA squad with trophy display table",
+      caption: "Full panoramic portrait capturing all enrolled junior and senior batch players with their mentor coaches and trophies.",
+      sourceNote: "Bowenpally Facility Grounds",
+      aspect: "panorama",
+      badge: "Full Academy Roster"
+    },
+    {
+      id: "g-pic-4",
+      type: "image",
+      title: "PCA Squad Open Outfield Lineup",
+      category: "Ground",
+      image: "/gallery/pca-full-squad-ground-lineup.jpg",
+      alt: "Academy students in blue uniform standing on the outfield with floodlight towers",
+      caption: "PCA players and coaches on the expansive natural turf outfield under daylight, backed by safety netting and lighting towers.",
+      sourceNote: "Bowenpally Outfield & Nets",
+      aspect: "landscape",
+      badge: "Turf Outfield"
+    },
+    {
+      id: "g-vid-3",
+      type: "video",
+      title: "3-2-1 Level Up! PCA Team Rally Chant",
+      category: "Celebration",
+      image: "/gallery/pca-squad-cheering-medals.jpg",
+      videoSrc: "/gallery/pca-team-chant-321.mp4",
+      alt: "PCA academy team shouting team cheer together",
+      caption: "Rousing team unity chant '3, 2, 1, Level Up!' as players celebrate their collective season progress.",
+      sourceNote: "Academy Squad Rally Video",
+      aspect: "landscape",
+      duration: "0:02",
+      badge: "Team Spirit"
+    },
+    {
+      id: "g-pic-5",
+      type: "image",
+      title: "Dussehra Cup Best Batsman & Bowler Trophies",
+      category: "Coaching",
+      image: "/gallery/pca-trophy-presentation-lineup.jpg",
+      alt: "Coach presenting trophy to young batsman with squad lined up",
+      caption: "Coaches presenting individual tournament trophies to rising stars who excelled during crunch game moments.",
+      sourceNote: "Match Ceremony",
+      aspect: "landscape",
+      badge: "Individual Awards"
+    },
+    {
+      id: "g-pic-6",
+      type: "image",
+      title: "Guard of Honor & Teammate Applause",
+      category: "Celebration",
+      image: "/gallery/pca-squad-celebration-clapping.jpg",
+      alt: "Young cricketers applauding teammate who won medal",
+      caption: "Students cheering each other in an inspiring display of sportsmanship and mutual encouragement.",
+      sourceNote: "Student Camaraderie",
+      aspect: "landscape",
+      badge: "Sportsmanship"
+    },
+    {
+      id: "g-vid-4",
+      type: "video",
+      title: "Junior Star Award Ceremony",
+      category: "Coaching",
+      image: "/gallery/pca-trophy-handover-stage.jpg",
+      videoSrc: "/gallery/pca-junior-star-award-trophy.mp4",
+      alt: "Junior academy cricketer stepping up for award",
+      caption: "Young prodigy stepping up to the presentation podium to receive their milestone performance trophy.",
+      sourceNote: "Tournament Video Highlight",
+      aspect: "landscape",
+      duration: "0:03",
+      badge: "Rising Talent"
+    },
+    {
+      id: "g-pic-7",
+      type: "image",
+      title: "Match Day Academy Lineup",
+      category: "Ground",
+      image: "/gallery/pca-ground-squad-lineup-wide.jpg",
+      alt: "Academy squad seated and standing on open ground",
+      caption: "The complete PCA coaching and player lineup ready for match day action at the Bowenpally facility.",
+      sourceNote: "Official Team Formation",
+      aspect: "landscape",
+      badge: "Squad Formation"
+    },
+    {
+      id: "g-pic-8",
+      type: "image",
+      title: "Championship Banner Panorama",
+      category: "Squad",
+      image: "/gallery/pca-champions-panoramic-view.jpg",
+      alt: "Wide panoramic photo of the academy squad",
+      caption: "Panoramic perspective of the academy cohort in front of the training complex and net facilities.",
+      sourceNote: "Facility Panorama",
+      aspect: "panorama",
+      badge: "Official Panorama"
+    },
+    {
+      id: "g-vid-5",
+      type: "video",
+      title: "Parent & Family Trophy Handover",
+      category: "Coaching",
+      image: "/gallery/pca-trophy-handover-stage.jpg",
+      videoSrc: "/gallery/pca-parent-award-presentation.mp4",
+      alt: "Parent presenting trophy to junior player",
+      caption: "Community celebration with parents and mentors presenting honors to junior cricket trainees.",
+      sourceNote: "Family & Community Video",
+      aspect: "landscape",
+      duration: "0:03",
+      badge: "Community"
+    },
+    {
+      id: "g-pic-9",
+      type: "image",
+      title: "Dussehra Cup Platinum Winners Squad",
+      category: "Trophies",
+      image: "/gallery/pca-team-dussehra-winners.jpg",
+      alt: "PCA team with Dussehra cup trophies",
+      caption: "Victory photograph commemorating the academy's Dussehra Cup Platinum championship triumph.",
+      sourceNote: "Dussehra Cup Championship",
+      aspect: "landscape",
+      badge: "Trophy Ceremony"
+    },
+    {
+      id: "g-pic-10",
+      type: "image",
+      title: "Gold Medal Pride",
+      category: "Celebration",
+      image: "/gallery/pca-squad-cheering-medals.jpg",
+      alt: "Squad members cheering with medals",
+      caption: "Junior squad members proudly showing off their hard-earned championship medals.",
+      sourceNote: "Medal Winners",
+      aspect: "landscape",
+      badge: "Medal Honors"
+    },
+    {
+      id: "g-vid-6",
+      type: "video",
+      title: "Walk of Honor & Team Applause",
+      category: "Celebration",
+      image: "/gallery/pca-squad-applause-moment.jpg",
+      videoSrc: "/gallery/pca-player-run-up-applause.mp4",
+      alt: "Player walking past cheering teammates",
+      caption: "Player walk of honor through cheering teammates and coaching staff.",
+      sourceNote: "Award Moment Video",
+      aspect: "landscape",
+      duration: "0:02",
+      badge: "Walk of Honor"
+    },
+    {
+      id: "g-pic-11",
+      type: "image",
+      title: "Athletic Squad in Royal Blue & Gold",
+      category: "Squad",
+      image: "/gallery/pca-champions-daylight-ground.jpg",
+      alt: "Squad in blue uniforms on green grass",
+      caption: "Official team photograph showcasing the PCA student athletes and trainers in their custom match jerseys.",
+      sourceNote: "Team Portrait",
+      aspect: "landscape",
+      badge: "Jersey Unveiling"
+    },
+    {
+      id: "g-pic-12",
+      type: "image",
+      title: "Individual Bowling & Batting Accolades",
+      category: "Coaching",
+      image: "/gallery/pca-trophy-handover-stage.jpg",
+      alt: "Coach presenting individual trophy",
+      caption: "Honoring players demonstrating rapid technical progress and competitive discipline.",
+      sourceNote: "Player Development",
+      aspect: "landscape",
+      badge: "Progress Awards"
+    },
+    {
+      id: "g-vid-7",
+      type: "video",
+      title: "Behind The Scenes - Squad Photo Shoot",
+      category: "Squad",
+      image: "/gallery/pca-team-trophy-table-pose.jpg",
+      videoSrc: "/gallery/pca-team-photo-session-behind-scenes.mp4",
+      alt: "Behind the scenes candid video of team getting ready",
+      caption: "Candid video of players and coaches sharing smiles while preparing the championship photo session.",
+      sourceNote: "Behind the Scenes Video",
+      aspect: "landscape",
+      duration: "0:07",
+      badge: "Behind The Scenes"
+    },
+    {
+      id: "g-pic-13",
+      type: "image",
+      title: "Tournament Silverware & Honors",
+      category: "Trophies",
+      image: "/gallery/pca-trophy-ceremony-wide.jpg",
+      alt: "Trophies and cups on table with team in background",
+      caption: "The complete set of tournament cups including Platinum Winner, Best Batsman, and Best Bowler on display.",
+      sourceNote: "Silverware Showcase",
+      aspect: "landscape",
+      badge: "Silverware Collection"
+    },
+    {
+      id: "g-pic-14",
+      type: "image",
+      title: "Player Milestone Recognition",
+      category: "Celebration",
+      image: "/gallery/pca-award-stage-sideview.jpg",
+      alt: "Player milestone award on stage",
+      caption: "Celebrating young cricket talents who proved their mettle in crunch match situations.",
+      sourceNote: "Milestone Celebration",
+      aspect: "landscape",
+      badge: "Milestone Moment"
+    },
+    {
+      id: "g-pic-15",
+      type: "image",
+      title: "The Winning Circle",
+      category: "Trophies",
+      image: "/gallery/pca-team-trophy-table-pose.jpg",
+      alt: "Team posing together around trophies",
+      caption: "PCA coaches and students gathered around their championship hardware.",
+      sourceNote: "Championship Circle",
+      aspect: "landscape",
+      badge: "Winners"
+    },
+    {
+      id: "g-pic-16",
+      type: "image",
+      title: "Smiles of Victory",
+      category: "Squad",
+      image: "/gallery/pca-team-trophy-table-smiles.jpg",
+      alt: "Students smiling with coaches",
+      caption: "The joy and pride of victory shared among teammates after months of rigorous morning and evening nets.",
+      sourceNote: "Victory Smiles",
+      aspect: "landscape",
+      badge: "Pure Joy"
+    },
+    {
+      id: "g-pic-17",
+      type: "image",
+      title: "Coaches Mentorship & Future Champions",
+      category: "Coaching",
+      image: "/gallery/pca-team-proud-moment.jpg",
+      alt: "PCA coaches seated in front of students",
+      caption: "Head Coach Prafull and senior academy coaches seated with their dedicated trainees.",
+      sourceNote: "Mentorship Heritage",
+      aspect: "landscape",
+      badge: "Coaching Panel"
+    },
+    {
+      id: "g-pic-18",
+      type: "image",
+      title: "Official PCA Academy Complex",
+      category: "Ground",
+      image: "/gallery/pca-team-ceremony-banner.jpg",
+      alt: "PCA academy complex building and netting",
+      caption: "Official Bowenpally facility frontage with coaching pavilion, nets, and open practice field.",
+      sourceNote: "Bowenpally Facility",
+      aspect: "landscape",
+      badge: "Academy Grounds"
+    },
+    {
+      id: "g-pic-19",
+      type: "image",
+      title: "Outfield Practice & Mentorship",
+      category: "Ground",
+      image: "/gallery/pca-coaches-and-squad-outfield.jpg",
+      alt: "Coaches and squad on green outfield",
+      caption: "Outfield coaching session addressing fielding agility, throwing techniques, and match temperament.",
+      sourceNote: "Outfield Session",
+      aspect: "landscape",
+      badge: "Ground Drills"
+    },
+    {
+      id: "g-pic-20",
+      type: "image",
+      title: "PCA Champions Celebration",
+      category: "Trophies",
+      image: "/gallery/pca-squad-trophy-celebration-table.jpg",
+      alt: "Students raising medals around trophies",
+      caption: "Student athletes holding medals up high in celebration of their tournament victory.",
+      sourceNote: "Championship Glory",
+      aspect: "landscape",
+      badge: "Gold & Silver"
+    },
+    {
+      id: "g-pic-21",
+      type: "image",
+      title: "Team Applause for Hard Work",
+      category: "Celebration",
+      image: "/gallery/pca-squad-applause-moment.jpg",
+      alt: "Students clapping for teammates",
+      caption: "Encouraging sports culture where every player's dedication is acknowledged and celebrated.",
+      sourceNote: "Team Culture",
+      aspect: "landscape",
+      badge: "Academy Culture"
     }
   ],
 

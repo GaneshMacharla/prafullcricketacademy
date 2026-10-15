@@ -1,12 +1,20 @@
 import React from 'react';
-import { Flame, Target, Award, Quote, ShieldAlert, ArrowRight } from 'lucide-react';
+import { Flame, Target, Award, Quote, ShieldAlert, ArrowRight, Play } from 'lucide-react';
 import { academy } from '../data/academy';
 
 interface AchievementSpotlightProps {
   onOpenTrialModal: () => void;
+  onOpenImageLightbox?: (
+    src: string,
+    title: string,
+    options?: { caption?: string; type?: 'image' | 'video'; badge?: string }
+  ) => void;
 }
 
-export const AchievementSpotlight: React.FC<AchievementSpotlightProps> = ({ onOpenTrialModal }) => {
+export const AchievementSpotlight: React.FC<AchievementSpotlightProps> = ({ 
+  onOpenTrialModal, 
+  onOpenImageLightbox 
+}) => {
   const ach = academy.recentAchievement;
 
   return (
@@ -26,7 +34,7 @@ export const AchievementSpotlight: React.FC<AchievementSpotlightProps> = ({ onOp
             <span>HCA League Match Center • Big Stage Heroics</span>
           </div>
 
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             WARRIOR SPIRIT ON THE 22 YARDS
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -52,12 +60,33 @@ export const AchievementSpotlight: React.FC<AchievementSpotlightProps> = ({ onOp
                   </span>
                 </div>
 
-                <h3 className="athletic-title text-3xl sm:text-5xl font-black text-white tracking-tight pt-1">
-                  {ach.player.name}
-                </h3>
-                <p className="font-athletic text-sm sm:text-base font-bold uppercase tracking-wider text-emerald-400">
-                  {ach.player.style} • PCA Academy Prodigy
-                </p>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-1">
+                  <div>
+                    <h3 className="athletic-title text-2xl sm:text-4xl font-bold text-white tracking-normal">
+                      {ach.player.name}
+                    </h3>
+                    <p className="font-athletic text-sm sm:text-base font-bold uppercase tracking-wider text-emerald-400">
+                      {ach.player.style} • PCA Academy Prodigy
+                    </p>
+                  </div>
+
+                  {/* Authentic Trophy Video Preview Pill */}
+                  {onOpenImageLightbox && (
+                    <button
+                      onClick={() => onOpenImageLightbox(
+                        '/gallery/pca-best-bowler-award-aryan.mp4', 
+                        "Aryan - Best Bowler Trophy Presentation", 
+                        { type: 'video', caption: 'Live tournament video of Aryan receiving the Best Bowler award from Coach Prafull.', badge: 'Best Bowler Trophy' }
+                      )}
+                      className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-amber-400/15 hover:bg-amber-400/25 border border-amber-400/40 text-amber-300 text-xs font-athletic font-bold uppercase tracking-wider transition-all shadow-md group shrink-0"
+                    >
+                      <div className="w-5 h-5 rounded-full bg-amber-400 text-black flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <Play className="w-2.5 h-2.5 fill-black ml-0.5" />
+                      </div>
+                      <span>Watch Award Video (0:21)</span>
+                    </button>
+                  )}
+                </div>
               </div>
 
               {/* Match Figures Grid (Sports Broadcast Card) */}
@@ -141,7 +170,7 @@ export const AchievementSpotlight: React.FC<AchievementSpotlightProps> = ({ onOp
                     key={idx}
                     className="p-3.5 sm:p-4 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 transition-colors flex items-start gap-3"
                   >
-                    <div className="w-7 h-7 rounded-lg bg-cricket-green/20 text-cricket-bright font-black text-xs flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-7 h-7 rounded-lg bg-cricket-green/20 text-cricket-bright font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">
                       W{idx + 1}
                     </div>
                     <div className="flex-1 min-w-0">

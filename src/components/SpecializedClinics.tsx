@@ -33,7 +33,7 @@ export const SpecializedClinics: React.FC<SpecializedClinicsProps> = ({ onOpenTr
             <span>High-Performance Masterclasses • Specialized Position Labs</span>
           </div>
 
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             ELITE POSITION-SPECIFIC MASTERCLASSES
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -68,7 +68,7 @@ export const SpecializedClinics: React.FC<SpecializedClinicsProps> = ({ onOpenTr
                     </span>
                   </div>
 
-                  <h3 className="athletic-title text-2xl sm:text-3xl font-black text-white mb-1 group-hover:text-cricket-bright transition-colors">
+                  <h3 className="athletic-title text-xl sm:text-2xl font-bold text-white mb-1 group-hover:text-cricket-bright transition-colors">
                     {clinic.title}
                   </h3>
                   <div className="font-athletic text-xs font-bold uppercase tracking-wider text-emerald-400 mb-4">
@@ -113,7 +113,7 @@ export const SpecializedClinics: React.FC<SpecializedClinicsProps> = ({ onOpenTr
                 <div className="pt-6 mt-4">
                   <button
                     onClick={() => onOpenTrialModal(clinic.title)}
-                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-athletic font-black text-xs sm:text-sm uppercase tracking-wider text-white bg-white/5 hover:bg-gradient-to-r hover:from-cricket-bright hover:to-emerald-400 hover:text-black border border-white/15 hover:border-transparent transition-all shadow-glow"
+                    className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-athletic font-bold text-xs sm:text-sm uppercase tracking-wider text-white bg-white/5 hover:bg-gradient-to-r hover:from-cricket-bright hover:to-emerald-400 hover:text-black border border-white/15 hover:border-transparent transition-all shadow-glow"
                   >
                     <span>Register for {clinic.title.split(' ')[0]} Masterclass</span>
                     <ArrowRight className="w-3.5 h-3.5" />

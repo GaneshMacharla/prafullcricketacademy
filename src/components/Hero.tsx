@@ -12,9 +12,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrialModal }) => {
       {/* Background Image with High-Contrast Sports Stadium Treatment */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
-          src="/images/academy/pca-gmaps-02.jpg"
-          alt="Prafull Cricket Academy students training on ground in Bowenpally"
-          className="w-full h-full object-cover object-center filter brightness-[0.28] contrast-[1.15]"
+          src="/gallery/pca-champions-team-trophies-wide.jpg"
+          alt="Prafull Cricket Academy champions squad and coaching staff"
+          className="w-full h-full object-cover object-center filter brightness-[0.32] contrast-[1.12]"
         />
         {/* Layered athletic gradients */}
         <div className="absolute inset-0 bg-gradient-to-b from-[#060b08]/90 via-[#060b08]/75 to-[#060b08]"></div>
@@ -31,8 +31,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrialModal }) => {
         <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 font-athletic text-xs font-bold uppercase tracking-wider">
             <Trophy className="w-3.5 h-3.5 text-amber-300" />
-            <span>HCA League Division Affiliated</span>
+            <span>Dussehra Cup Platinum Champions</span>
           </span>
+
+          <a 
+            href="#gallery"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 font-athletic text-xs font-bold uppercase tracking-wider hover:bg-emerald-500/25 transition-all"
+          >
+            <span className="w-2 h-2 rounded-full bg-cricket-bright animate-ping"></span>
+            <span>28+ Real Academy Photos & Match Videos</span>
+          </a>
 
           <a
             href={academy.mapsUrl}
@@ -60,7 +68,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrialModal }) => {
             </span>
           </div>
 
-          <h1 className="athletic-title text-4xl xs:text-5xl sm:text-7xl md:text-8xl font-black text-white leading-[0.95] tracking-tight">
+          <h1 className="athletic-title text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-bold text-white leading-[1.02] tracking-normal">
             BUILD YOUR GAME. <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cricket-bright via-emerald-300 to-amber-300">
               DOMINATE THE 22 YARDS.
@@ -76,7 +84,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTrialModal }) => {
         <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full sm:w-auto">
           <button
             onClick={onOpenTrialModal}
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-athletic font-black text-sm sm:text-base uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5 focus:outline-none"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full font-athletic font-bold text-sm sm:text-base uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all transform hover:-translate-y-0.5 focus:outline-none"
           >
             <Calendar className="w-4 h-4 sm:w-5 sm:h-5 shrink-0" />
             <span>Book Free Assessment Trial</span>

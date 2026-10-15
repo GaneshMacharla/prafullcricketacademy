@@ -87,7 +87,7 @@ export const TrialModal: React.FC<TrialModalProps> = ({
                 <MessageCircle className="w-5 h-5 fill-black" />
               </div>
               <div className="text-left">
-                <div className="text-sm font-extrabold">Chat on WhatsApp</div>
+                <div className="text-sm font-bold">Chat on WhatsApp</div>
                 <div className="text-xs text-black/80 font-medium">+91 87123 10862 • Instant Reply</div>
               </div>
             </div>

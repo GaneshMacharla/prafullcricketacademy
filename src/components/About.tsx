@@ -39,7 +39,7 @@ export const About: React.FC<AboutProps> = ({ onOpenTrialModal }) => {
           <span className="athletic-badge text-xs sm:text-sm tracking-wider text-cricket-bright bg-cricket-green/10 border border-cricket-green/30 px-4 py-1.5 rounded-full mb-3">
             About PCA Prafull Cricket Academy
           </span>
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             WHERE PASSION MEETS DISCIPLINE
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -54,8 +54,8 @@ export const About: React.FC<AboutProps> = ({ onOpenTrialModal }) => {
           <div className="lg:col-span-5 relative group w-full">
             <div className="relative rounded-2xl overflow-hidden border border-white/10 bg-cricket-card shadow-2xl">
               <img
-                src="/images/academy/pca-gmaps-04.jpg"
-                alt="PCA Prafull Cricket Academy coach instructing young player on bowling release mechanics"
+                src="/gallery/pca-coach-prafull-award-handshake.jpg"
+                alt="Head Coach Prafull presenting tournament medal to junior cricketer at PCA"
                 className="w-full aspect-[4/5] sm:aspect-square lg:aspect-[4/5] max-h-[520px] object-cover object-top group-hover:scale-102 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#080d0a] via-transparent to-transparent"></div>
@@ -63,11 +63,11 @@ export const About: React.FC<AboutProps> = ({ onOpenTrialModal }) => {
               {/* Image Attribution & Caption Overlay */}
               <div className="absolute bottom-0 inset-x-0 p-4 sm:p-5 bg-[#080d0a]/90 backdrop-blur-md border-t border-white/10">
                 <div className="flex flex-wrap items-center justify-between text-xs text-cricket-bright font-semibold mb-1 gap-1">
-                  <span>Authentic Coaching Session</span>
-                  <span className="text-[10px] sm:text-[11px] text-slate-400 bg-white/5 px-2 py-0.5 rounded">Google Maps Verified Photo</span>
+                  <span>Head Coach Prafull & Junior Star</span>
+                  <span className="text-[10px] sm:text-[11px] text-slate-400 bg-white/5 px-2 py-0.5 rounded">Tournament Presentation</span>
                 </div>
                 <p className="text-[11px] sm:text-xs text-slate-200">
-                  Direct hands-on posture & high-arm release alignment with training hurdles at Bowenpally ground.
+                  Direct mentorship, personal motivation, and rewarding excellence in official PCA academy uniform.
                 </p>
               </div>
             </div>

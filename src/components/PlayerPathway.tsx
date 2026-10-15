@@ -26,7 +26,7 @@ export const PlayerPathway: React.FC<PlayerPathwayProps> = ({ onOpenTrialModal }
             <span>Age-Graded Progression Matrix • Super Kings Academy Model</span>
           </div>
 
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             THE 4-STAGE PLAYER PATHWAY
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -49,7 +49,7 @@ export const PlayerPathway: React.FC<PlayerPathwayProps> = ({ onOpenTrialModal }
                 >
                   <div>
                     <div className="flex items-center justify-between gap-1 mb-2.5">
-                      <span className={`text-[10px] font-athletic font-extrabold uppercase px-2 py-0.5 rounded ${
+                      <span className={`text-[10px] font-athletic font-bold uppercase px-2 py-0.5 rounded ${
                         isSelected ? 'bg-cricket-green/30 text-cricket-bright border border-cricket-bright/30' : 'bg-white/5 text-slate-400'
                       }`}>
                         Stage 0{index + 1}
@@ -59,7 +59,7 @@ export const PlayerPathway: React.FC<PlayerPathwayProps> = ({ onOpenTrialModal }
                       </span>
                     </div>
 
-                    <div className={`font-athletic text-base sm:text-lg font-black uppercase tracking-wide leading-tight ${
+                    <div className={`font-athletic text-base sm:text-lg font-bold uppercase tracking-wide leading-tight ${
                       isSelected ? 'text-white' : 'text-slate-300 group-hover:text-white'
                     }`}>
                       {pathway.stageName}
@@ -92,7 +92,7 @@ export const PlayerPathway: React.FC<PlayerPathwayProps> = ({ onOpenTrialModal }
                   {activeStage.ageBracket}
                 </span>
               </div>
-              <h3 id="active-stage-title" className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+              <h3 id="active-stage-title" className="athletic-title text-xl sm:text-3xl lg:text-4xl font-bold text-white tracking-normal">
                 {activeStage.stageName}
               </h3>
               <p className="text-xs sm:text-sm md:text-base text-slate-300 mt-2 max-w-3xl leading-relaxed font-sans">
@@ -133,7 +133,7 @@ export const PlayerPathway: React.FC<PlayerPathwayProps> = ({ onOpenTrialModal }
                     key={idx}
                     className="p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-cricket-green/30 transition-colors flex items-start gap-3"
                   >
-                    <span className="w-7 h-7 rounded-lg bg-cricket-green/20 text-cricket-bright font-athletic font-black text-sm flex items-center justify-center shrink-0 mt-0.5 border border-cricket-bright/20">
+                    <span className="w-7 h-7 rounded-lg bg-cricket-green/20 text-cricket-bright font-athletic font-bold text-sm flex items-center justify-center shrink-0 mt-0.5 border border-cricket-bright/20">
                       0{idx + 1}
                     </span>
                     <span className="text-xs sm:text-sm text-slate-200 font-medium leading-relaxed font-sans">
@@ -166,7 +166,7 @@ export const PlayerPathway: React.FC<PlayerPathwayProps> = ({ onOpenTrialModal }
 
               {/* Pathway Trial CTA Card */}
               <div className="p-6 rounded-2xl bg-gradient-to-br from-[#122419] to-[#0a140e] border border-cricket-green/40 space-y-4 text-center shadow-xl">
-                <h5 className="font-athletic text-lg sm:text-xl font-black uppercase text-white tracking-wide">
+                <h5 className="font-athletic text-lg sm:text-xl font-bold uppercase text-white tracking-wide">
                   Evaluate Your Skill Level for {activeStage.stageName}
                 </h5>
                 <p className="text-xs text-slate-300 font-sans leading-relaxed">
@@ -174,7 +174,7 @@ export const PlayerPathway: React.FC<PlayerPathwayProps> = ({ onOpenTrialModal }
                 </p>
                 <button
                   onClick={() => onOpenTrialModal(activeStage.stageName)}
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-athletic font-black text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full font-athletic font-bold text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow hover:shadow-glow-lg transition-all"
                 >
                   <span>Book Free {activeStage.stageName} Assessment</span>
                   <ArrowRight className="w-4 h-4" />

@@ -28,7 +28,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ onOpenTrialModal
           <span className="athletic-badge text-xs sm:text-sm tracking-wider text-cricket-bright bg-cricket-green/10 border border-cricket-green/30 px-4 py-1.5 rounded-full mb-3">
             Elite Mentorship & Culture • Coaching Beyond Pedagogy
           </span>
-          <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+          <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-normal">
             MEET THE PCA COACHING PANEL
           </h2>
           <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -51,7 +51,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ onOpenTrialModal
                 </span>
               </div>
 
-              <h3 className="athletic-title text-3xl sm:text-5xl font-black text-white tracking-tight">
+              <h3 className="athletic-title text-2xl sm:text-4xl font-bold text-white tracking-normal">
                 Coach Prafull
               </h3>
               <p className="font-athletic text-base sm:text-lg font-bold uppercase tracking-wider text-emerald-400">
@@ -79,7 +79,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ onOpenTrialModal
               </div>
               <button
                 onClick={onOpenTrialModal}
-                className="w-full py-3 rounded-full font-athletic font-black uppercase tracking-wider text-xs text-black bg-gradient-to-r from-cricket-bright to-emerald-400 shadow-glow hover:shadow-glow-lg transition-all"
+                className="w-full py-3 rounded-full font-athletic font-bold uppercase tracking-wider text-xs text-black bg-gradient-to-r from-cricket-bright to-emerald-400 shadow-glow hover:shadow-glow-lg transition-all"
               >
                 Schedule Assessment with Coach Prafull
               </button>
@@ -104,7 +104,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ onOpenTrialModal
                   </span>
                 </div>
 
-                <h3 className="athletic-title text-2xl font-black text-white tracking-tight group-hover:text-cricket-bright transition-colors">
+                <h3 className="athletic-title text-xl sm:text-2xl font-bold text-white tracking-normal group-hover:text-cricket-bright transition-colors">
                   {coach.name}
                 </h3>
                 <div className="font-athletic text-xs font-bold uppercase tracking-wider text-slate-400 mt-1 mb-3">
@@ -129,7 +129,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ onOpenTrialModal
         {/* Bottom Banner */}
         <div className="mt-12 glass-panel rounded-2xl p-6 sm:p-8 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-5 bg-gradient-to-r from-emerald-500/10 via-[#0a120e] to-emerald-500/5 shadow-xl">
           <div className="space-y-1 text-center sm:text-left">
-            <h4 className="font-athletic text-lg sm:text-xl font-black uppercase text-white tracking-wide">
+            <h4 className="font-athletic text-lg sm:text-xl font-bold uppercase text-white tracking-wide">
               Ready to Train Under Our Expert Coaching Panel?
             </h4>
             <p className="text-xs sm:text-sm text-slate-300 font-sans">
@@ -138,7 +138,7 @@ export const CoachesSection: React.FC<CoachesSectionProps> = ({ onOpenTrialModal
           </div>
           <button
             onClick={onOpenTrialModal}
-            className="w-full sm:w-auto px-7 py-3.5 rounded-full font-athletic font-black text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright to-emerald-400 hover:from-emerald-300 hover:to-cricket-bright shadow-glow transition-all active:scale-95 shrink-0"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-full font-athletic font-bold text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright to-emerald-400 hover:from-emerald-300 hover:to-cricket-bright shadow-glow transition-all active:scale-95 shrink-0"
           >
             Connect with Coaching Desk
           </button>

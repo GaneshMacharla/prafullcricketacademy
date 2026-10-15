@@ -35,7 +35,7 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
               <span>Day-1 Player Assessment • Zero Risk Trial</span>
             </div>
 
-            <h2 className="athletic-title text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight">
+            <h2 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
               WHAT HAPPENS ON YOUR FREE TRIAL DAY
             </h2>
             <p className="mt-3 max-w-2xl text-slate-300 font-sans text-sm sm:text-base md:text-lg">
@@ -51,7 +51,7 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="w-11 h-11 rounded-2xl bg-cricket-green/20 border border-cricket-green/30 text-cricket-bright font-athletic font-black text-sm flex items-center justify-center">
+                    <span className="w-11 h-11 rounded-2xl bg-cricket-green/20 border border-cricket-green/30 text-cricket-bright font-athletic font-bold text-sm flex items-center justify-center">
                       {step.step}
                     </span>
                     <span className="px-3 py-1 rounded-full text-xs font-athletic font-bold uppercase tracking-wider bg-white/5 text-slate-300 border border-white/10">
@@ -59,7 +59,7 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
                     </span>
                   </div>
 
-                  <h3 className="athletic-title text-xl sm:text-2xl font-black text-white mb-2 group-hover:text-cricket-bright transition-colors">
+                  <h3 className="athletic-title text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-cricket-bright transition-colors">
                     {step.title}
                   </h3>
 
@@ -79,7 +79,7 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
           {/* Trial Booking Bar */}
           <div className="mt-8 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-emerald-950/70 via-[#0a1510] to-black/90 border border-emerald-500/30 flex flex-col sm:flex-row items-center justify-between gap-5 shadow-xl">
             <div className="text-center sm:text-left space-y-1">
-              <div className="athletic-title text-lg sm:text-2xl font-black text-white">
+              <div className="athletic-title text-lg sm:text-2xl font-bold text-white">
                 READY TO TAKE THE PITCH FOR YOUR ASSESSMENT?
               </div>
               <div className="text-xs sm:text-sm text-slate-300 font-sans">
@@ -89,7 +89,7 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
 
             <button
               onClick={onOpenTrialModal}
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-athletic font-black text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow transition-all shrink-0"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-athletic font-bold text-xs sm:text-sm uppercase tracking-wider text-black bg-gradient-to-r from-cricket-bright via-emerald-400 to-green-500 hover:from-emerald-300 hover:to-cricket-bright shadow-glow transition-all shrink-0"
             >
               <Calendar className="w-4 h-4" />
               <span>Book Free Trial Assessment</span>
@@ -104,7 +104,7 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
               <HelpCircle className="w-3.5 h-3.5 text-cricket-bright" />
               <span>Frequently Asked Questions</span>
             </div>
-            <h3 className="athletic-title text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+            <h3 className="athletic-title text-xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight">
               EVERYTHING PARENTS WANT TO KNOW
             </h3>
             <p className="mt-2 text-xs sm:text-sm text-slate-400 font-sans">
@@ -119,7 +119,7 @@ export const TrialProtocolFAQ: React.FC<TrialProtocolFAQProps> = ({ onOpenTrialM
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full font-athletic text-xs font-bold uppercase tracking-wider transition-all ${
                     selectedCategory === cat
-                      ? 'bg-cricket-bright text-black font-black shadow-glow'
+                      ? 'bg-cricket-bright text-black font-bold shadow-glow'
                       : 'bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/10'
                   }`}
                 >

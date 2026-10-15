@@ -16,7 +16,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenTrialModal }) => {
           {/* Col 1 & 2: Brand & Verification */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-600 to-red-900 border border-red-500/50 flex items-center justify-center font-extrabold text-white text-base">
+              <div className="w-10 h-10 rounded-full bg-gradient-to-br from-red-600 to-red-900 border border-red-500/50 flex items-center justify-center font-bold text-white text-base">
                 PCA
               </div>
               <span className="text-xl font-bold text-white tracking-tight">
